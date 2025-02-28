@@ -1,7 +1,331 @@
 /** CSS STYLE **/
+:root {
+	--white: #fff;
+	--semi-white:  #d7ccc0;
+	--light: #f5f4f0;
+	--dark-50: rgb(144, 141, 139);
+	--dark: #2a2626;
+	--brown: #b09a81;
+	--primary: #fe8a02;
+	--primary-dark: #42413c;
+	--blue: #1085c5;
+}
 
-.hello {
-  display: block;
+@font-face {
+	font-family: "Neucha";
+	src: url();
+}
 
-  color: #fff;
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+
+
+body {
+	font-family: "Open Sans";
+	font-size: 16px;
+	line-height: 1.6em;
+	color: var(--dark);
+}
+
+h1, h2, h3, h4 {
+	font-family: "Neucha";
+	line-height: 1.2em;
+}
+
+h1 {
+	font-size: 72px;
+	z-index: 2;
+}
+
+h2 {
+	font-size: 60px;
+}
+
+h3 {
+	font-size: 34px;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	width: 1110px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.text-primary {
+	color: #fe8a02;
+}
+
+.text-blue {
+	color: var(--blue);
+}
+
+.text-white {
+	color: var(--white);
+}
+
+.text-dark {
+	color: var(--dark);
+}
+
+.bg-white {
+	background: var(--white);
+}
+
+.bg-dark {
+	background: var(--primary-dark);
+}
+
+header {
+	position: relative;
+	width: 100%;
+}
+
+header::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 914px;
+	background-image: url('../img/background.png');
+	background-repeat: no-repeat;
+  background-size: cover;
+	opacity: 0.1;
+	z-index: -1
+}
+
+.header-main-img {
+	position: absolute;
+	right: -350px;
+}
+
+.video {
+	position: relative;
+	top: 200px;
+	margin-top: -170px;
+	width: 919px;
+	height: 517px;
+	filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
+}
+
+.nav-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 20px 30px;
+	padding: 0;
+}
+
+.nav-item:first-of-type {
+	padding: 0;
+}
+
+.nav-item {
+	padding: 24px;
+	width: calc((1110px - 60px) / 3);
+	list-style-type: none;
+	background: var(--white);
+}
+
+
+.nav-link {
+	text-decoration: none;
+}
+
+
+.nav-header {
+	font-size: 52px;
+	font-weight: 400;
+	/* text-transform: uppercase; */
+}
+
+.num {
+	font-size: 64px;
+	font-family: "Neucha";
+	line-height: 1;
+	color: var(--primary-dark);
+}
+
+.cognitive {
+	width: 100%;
+	position: relative;
+}
+
+.cognitive::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/background.png');
+	background-repeat: no-repeat;
+  background-size: cover;
+	opacity: 0.1;
+	z-index: 1;
+}
+
+.cognitive-header {
+	font-family: 'Neucha';
+}
+
+.divider {
+	width: 100%;
+	text-align: left;
+	padding: 5px 10px;
+}
+
+.reverse {
+	flex-direction: row-reverse !important;
+}
+
+.h1 {
+	height: 525px;
+	position: relative;
+	top: 55px;
+	left: -270px;
+}
+
+.text-box {
+	display: flex;
+	gap: 30px;
+}
+
+.text-block {
+	width: calc((1110px - 30px) / 2);
+}
+
+.link {
+	padding: 12px 24px;
+	font-weight: bold;
+}
+
+.info-btn {
+	text-transform: uppercase;
+}
+
+.btn {
+	border: none;
+	background: var(--primary);
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.footer-form {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 55px;
+}
+
+.email {
+	height: 50px;
+	padding: 15px;
+	width: 423px;
+}
+
+.send {
+	position: relative;
+	width: 70px;
+	height: 50px;
+}
+
+.send::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 70px;
+	height: 50px;
+	background-image: url('../img/send.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+  /* background-size: cover; */
+	z-index: 1;
+}
+
+.footer-form-item {
+	
+}
+
+.pt-60 {
+	padding-top: 60px;
+}
+
+.pb-40 {
+	padding-bottom: 40px;
+}
+
+.pb-30 {
+	padding-bottom: 30px;
+}
+
+.pb-16 {
+	padding-bottom: 16px;
+}
+
+.mt-100 {
+	margin-top: 100px;
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.mb-30 {
+	margin-bottom: 30px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.bg-dark {
+	background: var(--primary-dark);
+}
+
+.bg-transparent {
+	background: transparent;
+}
+
+.bg-brown {
+	background: var(--brown);
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.text-dark-50 {
+	color: var(--dark-50);
+}
+
+.text-brown {
+	color: var(--brown);
+}
+
+.gap-30 {
+	gap: 30px;
+}
+
+.cognitive-bg-brown {
+	background: var(--brown);
 }
